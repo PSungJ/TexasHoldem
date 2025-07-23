@@ -6,7 +6,8 @@ public class DeckManager : MonoBehaviour
 {
     public static DeckManager D_Instance;
 
-    [SerializeField] private List<GameObject>cardDeck = new List<GameObject>();
+    public List<GameObject>cardDeck = new List<GameObject>();
+    public List<GameObject> discardPile = new List<GameObject>();
 
     void Awake()
     {
@@ -34,6 +35,56 @@ public class DeckManager : MonoBehaviour
             GameObject temp = cardDeck[i];
             cardDeck[i] = cardDeck[j];
             cardDeck[j] = temp;
+        }
+    }
+
+    public GameObject DealCard()    // 번카드
+    {
+        if (cardDeck.Count == 0)
+            return null;
+
+        GameObject dealtCard = cardDeck[0]; // 덱의 맨 위 카드
+        cardDeck.RemoveAt(0);              // 덱에서 제거
+
+        Debug.Log($"카드 분배: {dealtCard.name}, 남은 카드: {cardDeck.Count}");
+        return dealtCard;
+    }
+
+    public List<GameObject> DealCards(int count, List<Transform> targetPositions)   // 플레이어 및 커뮤니티 카드 분배
+    {
+        List<GameObject> dealtCards = new List<GameObject>();
+
+        if (targetPositions == null || targetPositions.Count < count)
+        {
+            Debug.LogError("DealCards: targetPositions 리스트가 null이거나 분배할 카드 수보다 적습니다.");
+            return dealtCards;
+        }
+        for (int i = 0; i < count; i++)
+        {
+            GameObject card = DealCard(); // 덱에서 카드 한 장 가져오기
+            if (card != null)
+            {
+                // 카드를 활성화하고 목표 위치로 이동시킵니다.
+                card.SetActive(true);
+                card.transform.position = targetPositions[i].position;
+
+                dealtCards.Add(card);
+            }
+            else
+            {
+                Debug.LogWarning("덱에 카드가 부족하여 모든 카드를 분배할 수 없습니다.");
+                break; // 카드가 부족하면 루프 중단
+            }
+        }
+        return dealtCards;
+    }
+
+    public void DiscardCard(GameObject card)    // 번 카드로 버리는 카드 따로 보관
+    {
+        if (card != null)
+        {
+            discardPile.Add(card);
+            card.SetActive(false);
         }
     }
 }

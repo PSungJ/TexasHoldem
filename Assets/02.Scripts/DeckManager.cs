@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    public static DeckManager D_Instance;
-
     public List<GameObject>cardDeck = new List<GameObject>();
     public List<GameObject> discardPile = new List<GameObject>();
 

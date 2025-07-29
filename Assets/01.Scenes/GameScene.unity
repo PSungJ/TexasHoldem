@@ -2621,7 +2621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Name
-      value: Player4_AI
+      value: AI3
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Controller
@@ -3087,7 +3087,7 @@ GameObject:
   - component: {fileID: 443497648}
   - component: {fileID: 443497649}
   m_Layer: 0
-  m_Name: Player3HandPos1
+  m_Name: AI2HandPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,8 +3101,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443497647}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.177, y: 1.6, z: 0.766}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: -0.17699984, y: 1.6, z: 0.76600003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3908,7 +3908,7 @@ GameObject:
   - component: {fileID: 525633133}
   - component: {fileID: 525633134}
   m_Layer: 0
-  m_Name: Player6HandPos1
+  m_Name: AI5HandPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3922,8 +3922,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525633132}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.215, y: 1.6, z: 0.712}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.2150001, y: 1.6, z: 0.712}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4203,7 +4203,7 @@ Transform:
   m_GameObject: {fileID: 556516420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9659258, z: -0, w: 0.2588191}
-  m_LocalPosition: {x: -1.592821, y: 2, z: 1.1588452}
+  m_LocalPosition: {x: -1.5928211, y: 2, z: 1.1588454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5182,6 +5182,8 @@ MonoBehaviour:
   round: 0
   deckManager: {fileID: 689668518}
   DealerBTN: {fileID: 1478881487}
+  playerHand: []
+  AIHands: []
   flopPositions:
   - {fileID: 165964654}
   - {fileID: 188451867}
@@ -5763,7 +5765,7 @@ GameObject:
   - component: {fileID: 801900207}
   - component: {fileID: 801900208}
   m_Layer: 0
-  m_Name: Player5HandPos1
+  m_Name: AI4HandPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5777,8 +5779,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801900206}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.017, y: 1.6, z: 0.69}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: -0.017000139, y: 1.6, z: 0.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7463,7 +7465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1058139445}
   m_Layer: 0
-  m_Name: Player6_Pivot
+  m_Name: AI5_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7941,7 +7943,7 @@ GameObject:
   - component: {fileID: 1138433362}
   - component: {fileID: 1138433363}
   m_Layer: 0
-  m_Name: Player2HandPos2
+  m_Name: AI1HandPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7956,7 +7958,7 @@ Transform:
   m_GameObject: {fileID: 1138433361}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.14, y: 1.6, z: 0.734}
+  m_LocalPosition: {x: 0.14000006, y: 1.6, z: 0.73400027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7988,7 +7990,7 @@ GameObject:
   - component: {fileID: 1158206302}
   - component: {fileID: 1158206303}
   m_Layer: 0
-  m_Name: Player2HandPos1
+  m_Name: AI1HandPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8003,7 +8005,7 @@ Transform:
   m_GameObject: {fileID: 1158206301}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.076, y: 1.59, z: 0.734}
+  m_LocalPosition: {x: -0.07600004, y: 1.59, z: 0.73400027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8530,7 +8532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Name
-      value: Player6_AI
+      value: AI5
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Controller
@@ -9092,7 +9094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Name
-      value: Player2_AI
+      value: AI1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Controller
@@ -10159,7 +10161,7 @@ GameObject:
   - component: {fileID: 1405793253}
   - component: {fileID: 1405793254}
   m_Layer: 0
-  m_Name: Player4HandPos1
+  m_Name: AI3HandPos1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10173,8 +10175,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405793252}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.158, y: 1.6, z: 0.706}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.15799984, y: 1.6, z: 0.70599985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10245,7 +10247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Name
-      value: Player5_AI
+      value: AI4
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Controller
@@ -10266,7 +10268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1415754766}
   m_Layer: 0
-  m_Name: Player2_Pivot
+  m_Name: AI1_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10502,7 +10504,7 @@ GameObject:
   - component: {fileID: 1431939549}
   - component: {fileID: 1431939550}
   m_Layer: 0
-  m_Name: Player3HandPos2
+  m_Name: AI2HandPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10516,8 +10518,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431939548}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.042, y: 1.6, z: 0.743}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0.041999996, y: 1.6, z: 0.743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11468,7 +11470,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1539017831}
   m_Layer: 0
-  m_Name: Player5_Pivot
+  m_Name: AI4_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11930,7 +11932,7 @@ GameObject:
   - component: {fileID: 1597715925}
   - component: {fileID: 1597715926}
   m_Layer: 0
-  m_Name: Player5HandPos2
+  m_Name: AI4HandPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11944,8 +11946,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597715924}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.174, y: 1.6, z: 0.673}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.70710677}
+  m_LocalPosition: {x: 0.17399994, y: 1.6, z: 0.673}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13225,7 +13227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688899042}
   m_Layer: 0
-  m_Name: Player3_Pivot
+  m_Name: AI2_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13623,7 +13625,7 @@ Transform:
   m_GameObject: {fileID: 1738791360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.2588191, z: -0, w: 0.9659258}
-  m_LocalPosition: {x: 0.1784612, y: 2, z: 4.4908967}
+  m_LocalPosition: {x: 0.17846131, y: 2, z: 4.4908967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13702,7 +13704,7 @@ GameObject:
   - component: {fileID: 1754673021}
   - component: {fileID: 1754673022}
   m_Layer: 0
-  m_Name: Player4HandPos2
+  m_Name: AI3HandPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13716,8 +13718,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754673020}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.045, y: 1.6, z: 0.709}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.045000017, y: 1.6, z: 0.70900005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14145,7 +14147,7 @@ GameObject:
   - component: {fileID: 1821733131}
   - component: {fileID: 1821733132}
   m_Layer: 0
-  m_Name: Player6HandPos2
+  m_Name: AI5HandPos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14159,8 +14161,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821733130}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.011, y: 1.6, z: 0.707}
+  m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.010999978, y: 1.6, z: 0.7070001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14770,7 +14772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Name
-      value: Player3_AI
+      value: AI2
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
       propertyPath: m_Controller
@@ -15797,7 +15799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103273034}
   m_Layer: 0
-  m_Name: Player4_Pivot
+  m_Name: AI3_Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

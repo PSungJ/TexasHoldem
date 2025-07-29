@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,23 @@ public class GameManager : MonoBehaviour
     public Round round;
     public DeckManager deckManager;
     public GameObject DealerBTN;
+
+    // 플레이어 컴퍼넌트, AI 컴퍼넌트
+    public List<Transform> playerHand = new List<Transform>();
+    public List<AIHandData> AIHands;
+
+    // AI Hand Class
+    [System.Serializable]
+    public class AIHandData
+    {
+        private Transform aiMainTransform;
+        public List<Transform> handPositons = new List<Transform>();
+
+        public AIHandData(Transform aiTransform)
+        {
+            aiMainTransform = aiTransform;
+        }
+    }
 
     // 커뮤니티 카드 위치
     public Transform[] flopPositions = new Transform[3]; // 플롭 카드 3장 위치
@@ -48,9 +66,46 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        InitPlayerHand();
+        InitAiHand();
+    }
+
     void Start()
     {
         StartGame();
+    }
+
+    public void InitPlayerHand()
+    {
+        Transform[] playerHandPos = GameObject.Find("Players").GetComponentsInChildren<Transform>();
+        foreach (Transform playerHand in playerHandPos)
+        {
+            if (playerHand != this.transform && playerHand.name.StartsWith("Player1HandPos"))
+                this.playerHand.Add(playerHand);
+        }
+    }
+
+    public void InitAiHand()
+    {
+        Transform parentHands = GameObject.Find("Players").GetComponent<Transform>();
+        for (int i = 1; i <= 5; i++)
+        {
+            Transform aiPivot = parentHands.Find($"AI{i}_Pivot");   // AI1,2,3,4,5 찾기
+
+            if (aiPivot != null)
+            {
+                AIHandData curAIData = new AIHandData(aiPivot);
+                foreach(Transform handPos in aiPivot.GetComponentsInChildren<Transform>())  // 위에서 찾은 AI Pivot 위치에서 자식 중 HandPos 찾기
+                {
+                    // 자식의 이름이 "HandPos"를 포함하고, 자기 자신 오브젝트는 아닌 경우
+                    if (handPos != aiPivot && handPos.name.Contains("HandPos"))
+                        curAIData.handPositons.Add(handPos);
+                }
+                AIHands.Add(curAIData);  // AIData를 전체 데이터 리스트에 추가
+            }
+        }
     }
 
     public void StartGame()

@@ -44,7 +44,7 @@ public class DeckManager : MonoBehaviour
         GameObject dealtCard = cardDeck[0]; // 덱의 맨 위 카드
         cardDeck.RemoveAt(0);              // 덱에서 제거
 
-        Debug.Log($"카드 분배: {dealtCard.name}, 남은 카드: {cardDeck.Count}");
+        Debug.Log($"Burn Card: {dealtCard.name}, 남은 카드: {cardDeck.Count}");
         return dealtCard;
     }
 

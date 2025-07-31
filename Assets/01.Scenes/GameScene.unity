@@ -5179,9 +5179,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f0d84ac15514634b9cba24b7b1618e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  round: 0
   deckManager: {fileID: 689668518}
-  DealerBTN: {fileID: 1478881487}
+  round: 0
+  role: 0
+  playersTr:
+  - {fileID: 1396558428}
+  - {fileID: 836972904}
+  - {fileID: 2125887974}
+  - {fileID: 1219415511}
+  - {fileID: 1535395997}
+  - {fileID: 1123376709}
+  angle: 0
   playerHand: []
   AIHands: []
   flopPositions:
@@ -5190,6 +5198,9 @@ MonoBehaviour:
   - {fileID: 1192770444}
   turnPosition: {fileID: 643129078}
   riverPosition: {fileID: 625275708}
+  dealerTr: {fileID: 1691529533}
+  DealerBTN: {fileID: 1478881487}
+  dealerButtonIndex: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7041,6 +7052,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &999096241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+      propertyPath: m_Name
+      value: Dealer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
 --- !u!1 &1000268018
 GameObject:
   m_ObjectHideFlags: 0
@@ -13252,6 +13320,11 @@ Transform:
   - {fileID: 946000924}
   m_Father: {fileID: 1811825162}
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+--- !u!4 &1691529533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58e78d5c14558fd42bda3b0e43015efc, type: 3}
+  m_PrefabInstance: {fileID: 999096241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1698885383
 GameObject:
   m_ObjectHideFlags: 0
@@ -21308,6 +21381,7 @@ SceneRoots:
   - {fileID: 1485182029}
   - {fileID: 3531057663771161268}
   - {fileID: 4165095996835696692}
+  - {fileID: 999096241}
   - {fileID: 1811825162}
   - {fileID: 1478881490}
   - {fileID: 435300997}

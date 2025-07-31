@@ -6,14 +6,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager G_Instance;
+    public DeckManager deckManager;
 
     public enum Round { PRE, FLOP, TURN, RIVER , SHOWDOWN, END }    //Pre-Flop > Flop > Turn > River 순으로 라운드 진행
     public enum Role { BTN, SB, BB, UTG, MP, CO }    // 딜러버튼, 스몰블라인드, 빅블라인드, 언더더건, 미들포지션, 컷오프 역할 지정
     public Round round;
-    public DeckManager deckManager;
-    public GameObject DealerBTN;
+    public Role role;
+    public List<Transform> playersTr;
+    public float angle;
 
-    // 플레이어 컴퍼넌트, AI 컴퍼넌트
+    [Header("Player / AI Components")]
     public List<Transform> playerHand = new List<Transform>();
     public List<AIHandData> AIHands;
 
@@ -30,13 +32,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // 커뮤니티 카드 위치
-    public Transform[] flopPositions = new Transform[3]; // 플롭 카드 3장 위치
-    public Transform turnPosition;                      // 턴 카드 1장 위치
-    public Transform riverPosition;                     // 리버 카드 1장 위치
+    [Header("Community Cards")]
+    public Transform[] flopPositions = new Transform[3];    // 플롭 카드 3장 위치
+    public Transform turnPosition;                          // 턴 카드 1장 위치
+    public Transform riverPosition;                         // 리버 카드 1장 위치
 
-    // 딜러버튼 위치
-    private int dealerButtonIndex = 0;
+    [Header("Dealer")]
+    public Transform dealerTr;
+    public GameObject DealerBTN;
+    public int dealerButtonIndex = 0;
 
     public void SetRoundState(Round newState)
     {
@@ -106,6 +110,11 @@ public class GameManager : MonoBehaviour
                 AIHands.Add(curAIData);  // AIData를 전체 데이터 리스트에 추가
             }
         }
+    }
+
+    public void RoleCycle()
+    {
+        
     }
 
     public void StartGame()
